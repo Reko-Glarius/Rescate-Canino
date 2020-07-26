@@ -38,6 +38,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'core',
+    'dogs.apps.DogsConfig',
 ]
 
 MIDDLEWARE = [
@@ -114,8 +115,13 @@ USE_L10N = True
 
 USE_TZ = True
 
-
+import os
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 
 STATIC_URL = '/static/'
+
+###Media Files
+
+MEDIA_URL='/media/'
+MEDIA_ROOT= os.path.join(BASE_DIR, "media")
